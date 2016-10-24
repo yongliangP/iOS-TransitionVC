@@ -7,21 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA0B03921DB9CAFE007E0128 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B03841DB9CAFE007E0128 /* BouncePresentAnimation.m */; };
+		BA0B03931DB9CAFE007E0128 /* PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B03861DB9CAFE007E0128 /* PushAnimation.m */; };
+		BA0B03941DB9CAFE007E0128 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B03881DB9CAFE007E0128 /* SwipeUpInteractiveTransition.m */; };
+		BA0B03951DB9CAFE007E0128 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B038B1DB9CAFE007E0128 /* ModalViewController.m */; };
+		BA0B03961DB9CAFE007E0128 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B038C1DB9CAFE007E0128 /* ModalViewController.xib */; };
+		BA0B03971DB9CAFE007E0128 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B038E1DB9CAFE007E0128 /* PushViewController.m */; };
+		BA0B03981DB9CAFE007E0128 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0B038F1DB9CAFE007E0128 /* PushViewController.xib */; };
+		BA0B03991DB9CAFE007E0128 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B03911DB9CAFE007E0128 /* ViewController.m */; };
+		BA0B039D1DB9CB60007E0128 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B039C1DB9CB60007E0128 /* AppDelegate.m */; };
 		BA77280B1DACF1BE007491F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77280A1DACF1BE007491F2 /* main.m */; };
-		BA77280E1DACF1BE007491F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77280D1DACF1BE007491F2 /* AppDelegate.m */; };
-		BA7728111DACF1BE007491F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7728101DACF1BE007491F2 /* ViewController.m */; };
 		BA7728141DACF1BE007491F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7728121DACF1BE007491F2 /* Main.storyboard */; };
 		BA7728161DACF1BE007491F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7728151DACF1BE007491F2 /* Assets.xcassets */; };
 		BA7728191DACF1BE007491F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7728171DACF1BE007491F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA0B03831DB9CAFE007E0128 /* BouncePresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimation.h; sourceTree = "<group>"; };
+		BA0B03841DB9CAFE007E0128 /* BouncePresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimation.m; sourceTree = "<group>"; };
+		BA0B03851DB9CAFE007E0128 /* PushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimation.h; sourceTree = "<group>"; };
+		BA0B03861DB9CAFE007E0128 /* PushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimation.m; sourceTree = "<group>"; };
+		BA0B03871DB9CAFE007E0128 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
+		BA0B03881DB9CAFE007E0128 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
+		BA0B038A1DB9CAFE007E0128 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		BA0B038B1DB9CAFE007E0128 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		BA0B038C1DB9CAFE007E0128 /* ModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		BA0B038D1DB9CAFE007E0128 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		BA0B038E1DB9CAFE007E0128 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		BA0B038F1DB9CAFE007E0128 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
+		BA0B03901DB9CAFE007E0128 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BA0B03911DB9CAFE007E0128 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BA0B039B1DB9CB60007E0128 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA0B039C1DB9CB60007E0128 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BA7728061DACF1BE007491F2 /* TranVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA77280A1DACF1BE007491F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BA77280C1DACF1BE007491F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BA77280D1DACF1BE007491F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA77280F1DACF1BE007491F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BA7728101DACF1BE007491F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BA7728131DACF1BE007491F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA7728151DACF1BE007491F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA7728181DACF1BE007491F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +58,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA0B03821DB9CAFE007E0128 /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B03831DB9CAFE007E0128 /* BouncePresentAnimation.h */,
+				BA0B03841DB9CAFE007E0128 /* BouncePresentAnimation.m */,
+				BA0B03851DB9CAFE007E0128 /* PushAnimation.h */,
+				BA0B03861DB9CAFE007E0128 /* PushAnimation.m */,
+				BA0B03871DB9CAFE007E0128 /* SwipeUpInteractiveTransition.h */,
+				BA0B03881DB9CAFE007E0128 /* SwipeUpInteractiveTransition.m */,
+			);
+			path = TransitionAnimation;
+			sourceTree = "<group>";
+		};
+		BA0B03891DB9CAFE007E0128 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B038A1DB9CAFE007E0128 /* ModalViewController.h */,
+				BA0B038B1DB9CAFE007E0128 /* ModalViewController.m */,
+				BA0B038C1DB9CAFE007E0128 /* ModalViewController.xib */,
+				BA0B038D1DB9CAFE007E0128 /* PushViewController.h */,
+				BA0B038E1DB9CAFE007E0128 /* PushViewController.m */,
+				BA0B038F1DB9CAFE007E0128 /* PushViewController.xib */,
+				BA0B03901DB9CAFE007E0128 /* ViewController.h */,
+				BA0B03911DB9CAFE007E0128 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BA0B039A1DB9CB60007E0128 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B039B1DB9CB60007E0128 /* AppDelegate.h */,
+				BA0B039C1DB9CB60007E0128 /* AppDelegate.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		BA7727FD1DACF1BE007491F2 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +114,9 @@
 		BA7728081DACF1BE007491F2 /* TranVCDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BA77280C1DACF1BE007491F2 /* AppDelegate.h */,
-				BA77280D1DACF1BE007491F2 /* AppDelegate.m */,
-				BA77280F1DACF1BE007491F2 /* ViewController.h */,
-				BA7728101DACF1BE007491F2 /* ViewController.m */,
+				BA0B039A1DB9CB60007E0128 /* Others */,
+				BA0B03821DB9CAFE007E0128 /* TransitionAnimation */,
+				BA0B03891DB9CAFE007E0128 /* ViewController */,
 				BA7728121DACF1BE007491F2 /* Main.storyboard */,
 				BA7728151DACF1BE007491F2 /* Assets.xcassets */,
 				BA7728171DACF1BE007491F2 /* LaunchScreen.storyboard */,
@@ -138,7 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0B03961DB9CAFE007E0128 /* ModalViewController.xib in Resources */,
 				BA7728191DACF1BE007491F2 /* LaunchScreen.storyboard in Resources */,
+				BA0B03981DB9CAFE007E0128 /* PushViewController.xib in Resources */,
 				BA7728161DACF1BE007491F2 /* Assets.xcassets in Resources */,
 				BA7728141DACF1BE007491F2 /* Main.storyboard in Resources */,
 			);
@@ -151,9 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7728111DACF1BE007491F2 /* ViewController.m in Sources */,
-				BA77280E1DACF1BE007491F2 /* AppDelegate.m in Sources */,
+				BA0B03991DB9CAFE007E0128 /* ViewController.m in Sources */,
+				BA0B03931DB9CAFE007E0128 /* PushAnimation.m in Sources */,
 				BA77280B1DACF1BE007491F2 /* main.m in Sources */,
+				BA0B03971DB9CAFE007E0128 /* PushViewController.m in Sources */,
+				BA0B039D1DB9CB60007E0128 /* AppDelegate.m in Sources */,
+				BA0B03941DB9CAFE007E0128 /* SwipeUpInteractiveTransition.m in Sources */,
+				BA0B03951DB9CAFE007E0128 /* ModalViewController.m in Sources */,
+				BA0B03921DB9CAFE007E0128 /* BouncePresentAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +374,7 @@
 				BA77281F1DACF1BE007491F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
