@@ -26,9 +26,7 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        self.presentAnimation = [[BouncePresentAnimation alloc]init];
         self.transitionController = [[SwipeUpInteractiveTransition alloc] init];
-        self.pushAnimation = [[PushAnimation alloc] init];
         
     }
     return self;
