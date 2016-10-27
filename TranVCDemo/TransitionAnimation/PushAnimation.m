@@ -75,23 +75,48 @@
     UIView *containerView = [transitionContext containerView];
     [containerView addSubview:fromVC.view];
     [containerView addSubview:toVC.view];
-    //路径处理
-    CGRect originRect = CGRectMake(0, 0, 50, 50);
-    UIBezierPath *maskStartPath = [UIBezierPath bezierPathWithOvalInRect:originRect];
-    UIBezierPath *maskEndPath = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(originRect, -2000, -2000)];
-    //创建一个CAShapeLayer来负责展示圆形遮盖
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    toVC.view.layer.mask = maskLayer;
     
-    CABasicAnimation *maskAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
-    maskAnimation.fromValue = (id)maskStartPath.CGPath;
-    maskAnimation.toValue = (id)maskEndPath.CGPath;
-    maskAnimation.duration = [self transitionDuration:transitionContext];
-    maskAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    maskAnimation.fillMode = kCAFillModeForwards;
-    maskAnimation.removedOnCompletion = NO;
-    maskAnimation.delegate = self;
-    [maskLayer addAnimation:maskAnimation forKey:@"Path"];
+    
+    CATransition *transition = [CATransition animation];
+    //transition.autoreverses = YES;    //回退动画（动画可逆，即循环）
+    //transition.duration = 10.0f;
+    //transition.repeatCount = MAXFLOAT;
+    transition.delegate = self;
+    transition.removedOnCompletion = NO;
+    transition.fillMode = kCAFillModeForwards;//removedOnCompletion,fillMode配合使用保持动画完成效果
+    transition.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    //    - 确定动画类型:
+    transition.type = @"rippleEffect";
+    
+    //    - 确定子类型(方向等)
+    transition.subtype = kCATransitionFromLeft;
+    
+    //    - 确定动画时间
+    transition.duration = 1;
+    
+    //    - 添加动画
+    [containerView.layer addAnimation:transition forKey:nil];
+    
+    
+    
+    
+//    //路径处理
+//    CGRect originRect = CGRectMake(0, 0, 50, 50);
+//    UIBezierPath *maskStartPath = [UIBezierPath bezierPathWithOvalInRect:originRect];
+//    UIBezierPath *maskEndPath = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(originRect, -2000, -2000)];
+//    //创建一个CAShapeLayer来负责展示圆形遮盖
+//    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+//    toVC.view.layer.mask = maskLayer;
+//    
+//    CABasicAnimation *maskAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
+//    maskAnimation.fromValue = (id)maskStartPath.CGPath;
+//    maskAnimation.toValue = (id)maskEndPath.CGPath;
+//    maskAnimation.duration = [self transitionDuration:transitionContext];
+//    maskAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    maskAnimation.fillMode = kCAFillModeForwards;
+//    maskAnimation.removedOnCompletion = NO;
+//    maskAnimation.delegate = self;
+//    [maskLayer addAnimation:maskAnimation forKey:@"Path"];
     
 }
 

@@ -8,7 +8,8 @@
 
 #import "BouncePresentAnimation.h"
 
-
+#define KWindowWidth [UIApplication sharedApplication].keyWindow.frame.size.width
+#define KWindowHeight [UIApplication sharedApplication].keyWindow.frame.size.height
 @interface BouncePresentAnimation ()
 
 @property (nonatomic, assign) TransitionType type;
@@ -37,6 +38,8 @@
     return 0.8f;
 }
 
+#pragma mark - 弹簧动画
+#if 0
 
 //实现present动画逻辑代码
 - (void)presentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -104,6 +107,68 @@
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 }
+
+#endif
+
+
+
+#pragma mark - 20161027号更新 类似淘宝购物动画
+
+//实现present动画逻辑代码
+- (void)presentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIView *tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+    tempView.frame = fromVC.view.frame;
+    fromVC.view.hidden = YES;
+    UIView *containerView = [transitionContext containerView];
+        [containerView addSubview:tempView];
+    [containerView addSubview:toVC.view];
+    toVC.view.frame = CGRectMake(0, CGRectGetHeight(containerView.frame), CGRectGetWidth(containerView.frame), 0.6*KWindowHeight);
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 usingSpringWithDamping:0.55 initialSpringVelocity:1.0 / 0.55 options:0 animations:^{
+        toVC.view.transform = CGAffineTransformMakeTranslation(0, -0.6*KWindowHeight);
+        tempView.transform = CGAffineTransformMakeScale(0.85, 0.85);
+    } completion:^(BOOL finished)
+    {
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+        if ([transitionContext transitionWasCancelled])
+        {
+            fromVC.view.hidden = NO;
+            [tempView removeFromSuperview];
+        }
+    }];
+    
+    
+    
+}
+//实现dismiss动画逻辑代码
+- (void)dismissAnimation:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView *tempView = [transitionContext containerView].subviews[0];
+   
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        fromVC.view.transform = CGAffineTransformIdentity;
+        tempView.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        if ([transitionContext transitionWasCancelled])
+        {
+            [transitionContext completeTransition:NO];
+        }else{
+            [transitionContext completeTransition:YES];
+            toVC.view.hidden = NO;
+            [tempView removeFromSuperview];
+        }
+    }];
+    
+    
+}
+
 
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
